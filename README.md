@@ -7,6 +7,6 @@ Elaboration: flixblade is an Internet Movie Database which is expected to have t
 
 Note: 
 <br />1.This release only contains the software and not its dependencies such as CDN or Database.
-<br />2.Although this software is published publically og Github but still this is a proprietary software and shall only be viewed for reference or contribution and by any means I Amish Dotcom (https://facebook.com/amishdotcom) the author of this software deny the cloning/copying of this Software.
+<br />2.Although this software is published publically on Github but still this is a proprietary software and shall only be viewed for reference or contribution and by any means I Amish Dotcom (https://facebook.com/amishdotcom) the author of this software deny the cloning/copying of this Software.
 
 If you want to use this software or a part of it then please contact me at founder@cybertronics.org.in
