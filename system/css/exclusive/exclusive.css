@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* A Cybertronics Property(Programmed by Amish Dotcom) */
+
+/* Dropdown Menu Fix */
+.dropdown-menu{min-width:1rem}
+.navbar-nav .dropdown-menu{float:left}
+/*----*/
+.flixblade_exclusive_logo{z-index:1;overflow:hidden;height:100px;width:600px;background-image:url("../../images/flixblade_exclusive");background-repeat:no-repeat;background-position-x:50%;margin:0 auto;background-size:80%}
+.line1{border:2px solid#f22056}
+.head{color:#d20505;margin-left:8%;font-size:21px}
+.content{font-family:verdana;margin-left:8%;width:85%}
+.contact-form{text-align:center;margin-left:19%;width:60%}
+
+.py01{color:#6ca0b6;font-size:36px}
+.py02{font-weight:bold;list-style-type:disc;font-size:14px}
+ul.py02{font-weight:bold;list-style-type:disc;font-size:16px}
+.py03{font-size:18px;color:#1d2129}
+.py04{font-size:16px}
+.py05{color:#e9785b;font-size:36px}
+.py06{color:#31a38d;font-size:36px}
+.py07{color:#f36b7f;font-size:36px}
+.py08{color:#31a38d;font-size:30px;text-align:center}
+.py09{color:#f36b7f;text-align:center}
+.py10{font-size:30px;text-align:center}
+.py11{font-size:20px;text-align:center}
+.py12{font-size:11px}
+.py13{text-align:justify}
+.py14{color:#ff0000}
+.py15{text-align:center}
+.py16{font-size:20px}
+
+.amish_dotcom_image{z-index:1;overflow:hidden;height:590px;width:400px;background-image:url("../../../system/images/exclusive/amish_dotcom_flixblade");background-repeat:no-repeat;background-position-x:50%;background-position-Y:55%;margin:0 auto;background-size:100%;border-style:double;border-width:5px;border-color:red}
+
+@media only screen and (max-width: 620px){
+	.flixblade_exclusive_logo{height:70px;width:350px;margin-top:-7%;background-size:50vw}
+}
+@media only screen and (max-width: 500px){
+	.flixblade_exclusive_logo{height:60px;width:300px;margin-top:-10%;background-size:50vw}
+	.amish_dotcom_image{height:440px;width:300px}
+}
+@media only screen and (max-width: 430px){
+	.flixblade_exclusive_logo{display:none}
+	.amish_dotcom_image{height:360px;width:250px}
+}
+@media only screen and (max-width: 300px){
+	.flixblade_exclusive_logo{display:none}
+	.amish_dotcom_image{height:230px;width:160px}
+}
+@media only screen and (max-width: 235px){
+	.flixblade_exclusive_logo{display:none}
+	.content{margin-left:8%;width:90%;font-size:11px}
+	.amish_dotcom_image{height:180px;width:130px}
+}

@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* A Cybertronics Property(Programmed by Amish Dotcom) */
+
+/* Dropdown Menu Fix */
+.dropdown-menu{min-width:1rem}
+.navbar-nav .dropdown-menu{float:left}
+/*----*/
+
+/* Default */
+html,body{font-family:"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;background-color:white}
+
+.page_head{color:red;font-weight:bold;font-size:1.8rem}
+.sf{color:red}
+hr{border-top:2px solid red}
+.lif{list-style-type:disc;margin-top:-3%}
+
+#wrapper{margin:0 auto;padding:0px;text-align:center;width:995px}
+#wrapper h1{margin-top:50px;font-size:45px;color:#585858}
+#wrapper h1 p{font-size:18px}
+#result_div{width:600px;margin-left:195px;font-size:11px}
+#result_div li{margin-bottom:20px;list-style-type:none}
+#result_div li a{text-decoration:none;display:block;text-align:left}
+#result_div li a .title{font-weight:bold;font-size:18px;color:#5882FA}
+#result_div li a .title:hover{text-decoration:underline}
+#result_div li a .desc{color:#6E6E6E}
+
+body{font-family:courier new}
+.pagination{padding-left:0px;margin-left:0px}
+.pagination li{float:left;padding-right:10px}
+.pagination li a.current-link{font-weight:bold;text-decoration:none;color:#5882FA}
+.live-link{color:#5882FA}
+.live-link:hover{text-decoration:underline}	
+.current-link{color:#000000}
+.current-link:hover{text-decoration:none}
+
+.ctr-p{font-family: arial,sans-serif,Verdana}
+.fmulti{}.loc{}.swml-src{}.swml-upd{}.swml-loc{}.GNlFYb{color:#777}.p2Kmnc{color:#222;font-size:14px;font-weight:normal;-webkit-tap-highlight-color:rgba(0,0,0,0)}.Seo5Sb{display:inline-block;opacity:0.55;vertical-align:top}a.p2Kmnc:hover .Seo5Sb,a.p2Kmnc:active .Seo5Sb{opacity:1.0}.GNlFYb{margin:40px 0}.TfEe9d{margin-right:10px}.M6hT6{background:#f2f2f2;left:0;right:0;-webkit-text-size-adjust:none}.hRvfYe #fsettl:hover{text-decoration:underline}.hRvfYe #fsett a:hover{text-decoration:underline}.hRvfYe a:hover{text-decoration:underline}.Fx4vi{padding-left:74px;margin:0 !important}.In26Ec{padding:0 !important;margin:0 !important}#fbarcnt{display:block}.smiUbb img{margin-right:4px}.smiUbb a,.M6hT6 #swml a{text-decoration:none}.fmulti{text-align:center}.fmulti #fuser{display:block;float:none}#fuserm{line-height:25px}#fsl{white-space:nowrap}#fsett{background:#fff;border:1px solid #999;bottom:30px;padding:10px 0;position:absolute;box-shadow:0 2px 4px rgba(0,0,0,0.2);box-shadow:0 2px 4px rgba(0,0,0,0.2);text-align:left;z-index:104}#fsett a{display:block;line-height:44px;padding:0 20px;text-decoration:none;white-space:nowrap}.p2Kmnc{padding:8px 16px;margin-right:10px}.B4GxFc{margin-left:166px}#fbar{background:#e2d3d3;border-top:1px solid #e4e4e4;line-height:40px;min-width:auto}.yBWvle{margin-left:166px}.fbar p,.fbar a,#fsettl,#fsett a{color:#777}.fbar a:hover,#fsett a:hover{color:#333}.fbar{font-size:small}#fuser{float:right}.smiUbb{margin-left:166px;line-height:15px;}</style><style>#fsl{margin-left:30px}.fmulti #fsl{margin-left:0}#fsl{margin-left:30px}.fmulti #fsl{margin-left:0}
+
+/* Content Adjuster (Width) --------------------------------------- */
+@media screen and (min-width: 100px) {.Fx4vi{padding-left:0px;margin:2px !important}
+.donate,.cora,.developer,.cont,.dmca,.privacy,.terms{display:none}#fsl{margin-left:0px}.search_bar button[type=submit]{min-width:0px}.search_bar.main input[type=text]{font-size:10px}.flixblade_logo{width:60vw}.search_bar{top:35vh}.search_bar{width:35vw}#result_div{width:fit-content;margin-left:10px;font-size:9px}#result_div li a .title{font-size:14px}}
+@media screen and (min-width: 160px) {.Fx4vi{padding-left:0px;margin:5px !important}}
+@media screen and (min-width: 240px) {.Fx4vi{padding-left:0px;margin:2px !important}.privacy,.terms{display:unset}#fsl{margin-left:0px}.search_bar.main input[type=text]{font-size:13px}.flixblade_logo{width:60vw}.search_bar{width:60vw}}
+@media screen and (min-width: 285px) {.Fx4vi{padding-left:0px;margin:2px !important}.dmca{display:unset} .flixblade_logo{width:50vw}}
+@media screen and (min-width: 350px) {.Fx4vi{padding-left:0px;margin:2px !important}.cont{display:unset} #result_div{width:340px;margin-left:10px;font-size:9px}#result_div li a .title{font-size:14px}}
+@media screen and (min-width: 400px) {.Fx4vi{padding-left:2px;margin:2px !important}#fsl{margin-left:30px}.search_bar button[type=submit]{min-width:56px}.flixblade_logo{width:40vw}}
+@media screen and (min-width: 450px) {.Fx4vi{padding-left:5px;margin:5px !important}.search_bar.main input[type=text]{font-size:14px}#result_div{width:440px;margin-left:30px;font-size:11px}#result_div li a .title{font-size:18px}}
+@media screen and (min-width: 540px) {.Fx4vi{padding-left:10px;margin:10px !important}.search_bar{top:41vh}#result_div{width:450px;margin-left:60px}}
+@media screen and (min-width: 600px) {.Fx4vi{padding-left:0px;margin:1px !important}#result_div{width:480px;margin-left:140px}
+.donate,.cora,.developer{display:unset}.search_bar.main input[type=text]{font-size:16px}}
+@media screen and (min-width: 621px) {.Fx4vi{padding-left:2px;margin:2px !important}}
+@media screen and (min-width: 660px) {.Fx4vi{padding-left:8px;margin:1px !important}}
+@media screen and (min-width: 700px) {.Fx4vi{padding-left:14px;margin:0px !important}}
+@media screen and (min-width: 720px) {.Fx4vi{padding-left:14px;margin:0px !important}}
+@media screen and (min-width: 750px) {.Fx4vi{padding-left:19px}}
+@media screen and (min-width: 800px) {.Fx4vi{padding-left:22px}.flixblade_logo{width:24vw}#result_div{width:600px}}
+@media screen and (min-width: 960px) {.Fx4vi{padding-left:35px}}
+@media screen and (min-width: 1024px) {.Fx4vi{padding-left:42px}}
+@media screen and (min-width: 1279px) {.Fx4vi{padding-left:70px}}
+@media screen and (min-width: 1366px) {.Fx4vi{padding-left:75px}}
+/* @media for 1366 x 1024 px (Specific) */
+@media screen and (min-width: 1366px) and (min-height: 1024px) {.Fx4vi{padding-left:74px}}
+/* @media for 1366 x 1024 px (Specific) (Finished) */
+@media screen and (min-width: 1440px) {.Fx4vi{padding-left:82px}}
+@media screen and (min-width: 1600px) {.Fx4vi{padding-left:100px}}
+@media screen and (min-width: 1680px) {.Fx4vi{padding-left:107px}}
+@media screen and (min-width: 1920px) {.Fx4vi{padding-left:130px}}

@@ -1,0 +1,141 @@
+#Force www on flixblade.com:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^flixblade.com [NC]
+RewriteRule ^(.*)$ https://www.flixblade.com/$1 [L,R=301,NC]
+
+# Defining the index file for every directory
+DirectoryIndex flixblade.php
+
+# Trailing Slash Remover
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R] # <- for test, for prod use [L,R=301]
+
+# Run php without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .php typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+
+#-------------Disguise Code-------------
+# Run asp without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.asp [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .asp typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.asp -f
+RewriteRule ^ %{REQUEST_URI}.asp [NC,L]
+
+# Run jsp without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.jsp [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .jsp typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.jsp -f
+RewriteRule ^ %{REQUEST_URI}.jsp [NC,L]
+
+# Run js without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.js [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .js typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.js -f
+RewriteRule ^ %{REQUEST_URI}.js [NC,L]
+
+# Run xml without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.xml [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .xml typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.xml -f
+RewriteRule ^ %{REQUEST_URI}.xml [NC,L]
+
+# Run css without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.css [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .css typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.css -f
+RewriteRule ^ %{REQUEST_URI}.css [NC,L]
+
+# Run svg without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.svg [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .svg typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.svg -f
+RewriteRule ^ %{REQUEST_URI}.svg [NC,L]
+
+# Run png without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.png [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .png typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.png -f
+RewriteRule ^ %{REQUEST_URI}.png [NC,L]
+
+# Run ico without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.ico [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .ico typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.ico -f
+RewriteRule ^ %{REQUEST_URI}.ico [NC,L]
+
+# Run webmanifest without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.webmanifest [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .webmanifest typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.webmanifest -f
+RewriteRule ^ %{REQUEST_URI}.webmanifest [NC,L]
+
+# Run .jpg without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.jpg [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .jpg typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.jpg -f
+RewriteRule ^ %{REQUEST_URI}.jpg [NC,L]
+
+# Run .jpeg without filename extension
+RewriteEngine on 
+RewriteCond %{THE_REQUEST} /([^.]+)\.jpeg [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+# Redirect .jpeg typed users to extensionless page
+RewriteCond %{REQUEST_FILENAME}.jpeg -f
+RewriteRule ^ %{REQUEST_URI}.jpeg [NC,L]
+
+#-------------Disguise Code-------------
+
+# Run html without filename extension
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+# Run htm without filename extension
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.htm -f
+RewriteRule ^(.*)$ $1.htm
+
+ErrorDocument 400 /400.shtml
+ErrorDocument 401 /401.shtml
+ErrorDocument 403 /403.shtml
+ErrorDocument 404 /404.shtml
+ErrorDocument 414 /414.shtml
+ErrorDocument 500 /500.shtml

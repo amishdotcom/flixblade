@@ -1,0 +1,78 @@
+form{margin:30px auto 110px}
+.flixblade_logo{margin:0;position:absolute;top:32vh;left:49%;width:24vw;transform:translate(-50%,-50%)}
+.search_bar{position:absolute;top:41vh;left:-1%;width:60vw;background:#fff;border:#b7b7b7 solid 1px;border-radius:3px;-webkit-box-shadow:0 0 3px #ccc;box-shadow:0 0 3px #ccc;position:relative;font-family:'Source Sans Pro',sans-serif}
+.search_bar input[type=text]{border:none;-webkit-box-shadow:none;box-shadow:none;padding:0.7vw;margin:0;overflow:hidden}
+.search_bar input[type=text]:focus{outline:none}
+.search_bar button[type=submit]{
+  background:-webkit-gradient(linear, left top, left bottom, from(#f22056), to(#1e6ab5));
+  background:linear-gradient(#f22056, #f22056);
+  color:rgba(255, 255, 255, 0);
+  border:1px solid #f2bcca;
+  width:10%;
+  min-width:56px;
+  position:absolute;
+  top:-1px;
+  right:-14px;
+  bottom:-1px;
+  border-radius:0 3px 3px 0;
+  margin:0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.search_bar button[type=submit]:after{
+  content: '';
+  position:absolute;
+  top:18%;
+  right:0;
+  bottom:22%;
+  left:4%;
+  background:url("../assets/search-icon") no-repeat center center;
+  background-size:contain;
+}
+.search_bar button[type=submit]:hover, .search_bar button[type=submit]:focus {
+  background: -webkit-gradient(linear, left top, left bottom, from(#3388dd), to(#f22056));
+  background: linear-gradient(#f20920, #f20920);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.search_bar.main{max-width:1200px}
+.search_bar.main input[type=text]{font-size:16px}
+.search_bar ::-webkit-input-placeholder{font-weight:400}
+.search_bar :-ms-input-placeholder{font-weight:400}
+.search_bar ::-ms-input-placeholder{font-weight:400}
+.search_bar ::placeholder{font-weight:400}
+
+.ctr-p{font-family: arial,sans-serif,Verdana}
+.fmulti{}.loc{}.swml-src{}.swml-upd{}.swml-loc{}.GNlFYb{color:#777}.p2Kmnc{color:#222;font-size:14px;font-weight:normal;-webkit-tap-highlight-color:rgba(0,0,0,0)}.Seo5Sb{display:inline-block;opacity:0.55;vertical-align:top}a.p2Kmnc:hover .Seo5Sb,a.p2Kmnc:active .Seo5Sb{opacity:1.0}.GNlFYb{margin:40px 0}.TfEe9d{margin-right:10px}.EvHmz{bottom:0;left:0;position:absolute;right:0}.M6hT6{background:#f2f2f2;left:0;right:0;-webkit-text-size-adjust:none}.hRvfYe #fsettl:hover{text-decoration:underline}.hRvfYe #fsett a:hover{text-decoration:underline}.hRvfYe a:hover{text-decoration:underline}.Fx4vi{padding-left:74px;margin:0 !important}.In26Ec{padding:0 !important;margin:0 !important}#fbarcnt{display:block}.smiUbb img{margin-right:4px}.smiUbb a,.M6hT6 #swml a{text-decoration:none}.fmulti{text-align:center}.fmulti #fuser{display:block;float:none}#fuserm{line-height:25px}#fsl{white-space:nowrap}#fsett{background:#fff;border:1px solid #999;bottom:30px;padding:10px 0;position:absolute;box-shadow:0 2px 4px rgba(0,0,0,0.2);box-shadow:0 2px 4px rgba(0,0,0,0.2);text-align:left;z-index:104}#fsett a{display:block;line-height:44px;padding:0 20px;text-decoration:none;white-space:nowrap}.p2Kmnc{padding:8px 16px;margin-right:10px}.B4GxFc{margin-left:166px}#fbar{background:#e2d3d3;border-top:1px solid #e4e4e4;line-height:40px;min-width:auto}.yBWvle{margin-left:166px}.fbar p,.fbar a,#fsettl,#fsett a{color:#777}.fbar a:hover,#fsett a:hover{color:#333}.fbar{font-size:small}#fuser{float:right}.smiUbb{margin-left:166px;line-height:15px;}</style><style>#fsl{margin-left:30px}.fmulti #fsl{margin-left:0}#fsl{margin-left:30px}.fmulti #fsl{margin-left:0}
+
+/* Content Adjuster (Width) --------------------------------------- */
+@media screen and (min-width: 100px) {.Fx4vi{padding-left:0px;margin:2px !important}
+.donate,.cora,.developer,.cont,.dmca,.privacy,.terms{display:none}#fsl{margin-left:0px}#fsl{margin-left:30px}.search_bar button[type=submit]{min-width:25%}.search_bar.main input[type=text]{font-size:12.5px}.flixblade_logo{width:60vw}.search_bar{top:35vh}.search_bar{width:93%;line-height:2}}
+@media screen and (min-width: 160px) {.Fx4vi{padding-left:0px;margin:5px !important}}
+@media screen and (min-width: 240px) {.Fx4vi{padding-left:0px;margin:2px !important}.privacy,.terms{display:unset}#fsl{margin-left:0px}.search_bar.main input[type=text]{font-size:13px}.flixblade_logo{width:60vw}.search_bar button[type=submit]{min-width:40px}}
+@media screen and (min-width: 285px) {.Fx4vi{padding-left:0px;margin:2px !important}.dmca{display:unset}.flixblade_logo{width:50vw}}
+@media screen and (min-width: 350px) {.Fx4vi{padding-left:0px;margin:2px !important}.cont{display:unset}}
+@media screen and (min-width: 400px) {.Fx4vi{padding-left:2px;margin:2px !important}#fsl{margin-left:30px}.flixblade_logo{width:40vw}}
+@media screen and (min-width: 450px) {.Fx4vi{padding-left:5px;margin:5px !important}.search_bar.main input[type=text]{font-size:14px}}
+@media screen and (min-width: 540px) {.Fx4vi{padding-left:10px;margin:10px !important}.search_bar{top:41vh;line-height:1.5}}
+@media screen and (min-width: 600px) {.Fx4vi{padding-left:0px;margin:1px !important}.search_bar{width:65vw}
+.donate,.cora,.developer{display:unset}.search_bar.main input[type=text]{font-size:16px}}
+@media screen and (min-width: 621px) {.Fx4vi{padding-left:2px;margin:2px !important}}
+@media screen and (min-width: 660px) {.Fx4vi{padding-left:8px;margin:1px !important}}
+@media screen and (min-width: 700px) {.Fx4vi{padding-left:14px;margin:0px !important}}
+@media screen and (min-width: 750px) {.Fx4vi{padding-left:19px}.search_bar{top:35vh}}
+@media screen and (min-width: 800px) {.Fx4vi{padding-left:22px}.flixblade_logo{width:24vw}}
+@media screen and (min-width: 960px) {.Fx4vi{padding-left:35px}.search_bar{top:41vh}}
+@media screen and (min-width: 1024px) {.Fx4vi{padding-left:42px}}
+@media screen and (min-width: 1279px) {.Fx4vi{padding-left:70px}}
+@media screen and (min-width: 1366px) {.Fx4vi{padding-left:75px}}
+/* @media for 1366 x 1024 px (Specific) */
+@media screen and (min-width: 1366px) and (min-height: 1024px) {.Fx4vi{padding-left:74px}}
+/* @media for 1366 x 1024 px (Specific) (Finished) */
+@media screen and (min-width: 1440px) {.Fx4vi{padding-left:82px}}
+@media screen and (min-width: 1600px) {.Fx4vi{padding-left:100px}}
+@media screen and (min-width: 1680px) {.Fx4vi{padding-left:107px}}
+@media screen and (min-width: 1920px) {.Fx4vi{padding-left:130px}}

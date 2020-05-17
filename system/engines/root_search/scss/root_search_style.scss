@@ -1,0 +1,167 @@
+@import "google_font.css";
+
+$shade_color: #e7e7e7;
+$highlight_color: #1C62A8;
+
+*	{ 
+  box-sizing: border-box; 
+}
+
+form {
+  margin: 30px auto 110px;
+}
+
+.flixblade_logo{
+  margin: 0;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.search_bar {
+  position:absolute;
+  top:280px;
+  background: #fff;
+  border: #f2bcca solid 1px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #ccc;
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+  max-width: 420px;
+  
+  input[type=text] {
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+    font-size: 14px;
+    width: 80%;
+    padding: .5em;
+    margin: 0;
+    overflow: hidden;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  button[type=submit] {
+    background: linear-gradient(lighten($highlight_color, 10%), lighten($highlight_color, 3%));
+    color: rgba(255, 255, 255, 0);
+    border: 1px solid $highlight-color;
+    width: 10%;
+    min-width: 56px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 0 3px 3px 0;
+    margin: 0;
+    user-select: none;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 18%;
+      right: 0;
+      bottom: 22%;
+      left: 4%;
+      background: url("../assets/search-icon.svg") no-repeat center center;
+      background-size: contain;
+    }
+    
+    &:hover, &:focus {
+      background: linear-gradient(lighten($highlight_color, 15%), lighten($highlight_color, 7%));
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+  }
+  
+  .search_dropdown {
+    font-weight: 600;
+    min-width: 17px;
+    background: linear-gradient(lighten($shade_color, 5%), darken($shade_color, 2%));
+    border-right: 1px solid #ddd;
+    color: #555;
+    padding: 0 28px 0 13px;
+    border-radius: 2px 0 0 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10000;
+    user-select: none;
+    box-sizing: content-box;
+    
+    &:after {
+      content: "\2193";
+      color: rgba(85, 85, 85, 0);
+      background: url("../assets/down-arrow.svg") no-repeat top left;
+      height: 8px;
+      width: 10px;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -6px;
+    }
+    
+    &:hover,
+    &.active {
+      background: linear-gradient($shade_color, darken($shade_color, 7%));
+      cursor: pointer;
+      border-right-color: #ccc;
+    }
+    
+    > span {
+      position: absolute;
+      top: 50%;
+      margin-top: -8px;
+      white-space: nowrap;
+      font-size: 15px;
+    }
+    
+    ul {
+      display: none;
+      position: absolute;
+      top: 105%;
+      left: -1px;
+      font-size: 14px;
+      width: 225px;
+      background: #fff;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 7px 0;
+    }
+    
+    li {
+      list-style-type: none;
+      margin: 0;
+      padding: 5px 18px;
+      color: $highlight_color;
+      line-height: 1.2em;
+      position: relative;
+      
+      &:hover {
+        background: $shade_color;
+      }
+      
+      &.selected {
+        background: $highlight_color;;
+        color: #fff;
+      }
+    }
+  }
+  
+  &.main {
+    max-width: 650px;
+    
+    input[type=text] {
+      font-size: 16px;
+    }
+  }
+  
+  ::placeholder {
+   font-weight: 400;
+}
+  
+}

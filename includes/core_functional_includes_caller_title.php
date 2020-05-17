@@ -1,0 +1,31 @@
+<?php
+include '../../includes/db_fetchers/fetch_movie_all.php';
+include '../../includes/functional_engines/image_path_engine.php';
+include '../../includes/functional_engines/title-type_engine.php';
+include '../../includes/functional_engines/is-adult_engine.php';
+include '../../includes/functional_engines/start-and-year_engine.php';
+include '../../includes/functional_engines/runtime_engine.php';
+include '../../includes/functional_engines/director_engine.php';
+include '../../includes/functional_engines/writer_engine.php';
+include '../../includes/functional_engines/full_cast.php';
+include '../../includes/functional_engines/description_engine.php';
+include '../../includes/functional_engines/plot_engine.php';
+include '../../includes/functional_engines/tagline_engine.php';
+include '../../includes/functional_engines/aka_engine.php';
+include '../../includes/functional_engines/company_engine.php';
+include '../../includes/functional_engines/country_engine.php';
+include '../../includes/functional_engines/creator_engine.php';
+include '../../includes/functional_engines/certification_engine.php';
+include '../../includes/functional_engines/location_engine.php';
+include '../../includes/functional_engines/budget_engine.php';
+include '../../includes/functional_engines/gross_engine.php';
+include '../../includes/functional_engines/aspect-ratio_engine.php';
+include '../../includes/functional_engines/color_engine.php';
+include '../../includes/functional_engines/sound-mix_engine.php';
+include '../../includes/functional_engines/awards_engine.php';
+include '../../includes/functional_engines/seasons_engine.php';
+//include '../../includes/functional_engines/full-cast_engine.php';
+include '../../includes/functional_engines/release-date-iso-8601_engine.php';
+include '../../includes/functional_engines/plot-keywords_engine.php';
+include '../../includes/functional_engines/runtime-iso-8601.php';
+?>

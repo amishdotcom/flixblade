@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* A Cybertronics Property(Programmed by Amish Dotcom) */
+
+.movie_name{color:red;margin-left:0%}.title_year{color:#C0C0C0}
+@media only screen and (max-width: 809px){.movie_name{font-size:2em}}
+@media only screen and (max-width: 649px){.movie_name{font-size:1.6em}}
+
+.modal-backdrop{z-index:-1}
+
+/* CSS Modal Box Auto Resizer Acc. to Content */
+.modal-body{position:relative;overflow-y:auto;max-height:400px;padding:15px}
+
+
+.flstrs{font-size:16px;color:blue}
+
+/* CSS class used to crop long outputs (Desktop Version)*/
+.long_txt_expnd{width:250px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.long_txt_expnd:hover{overflow:visible;white-space:normal;width:auto}
+
+.description_card{margin:auto;width:70%}
+.plot_card{margin:auto;width:70%}
+.tagline_card{margin:auto;width:70%}
+.details_card{margin:auto;width:22rem}
+.d-content{font-size:0.8rem;text-align:center}
+
+#myImg:hover{opacity:0.7}
+.modal{position:fixed;z-index:1;padding-top:30px;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.9)}
+.modal-content{position:relative;width:40vw;height:93vh;margin:auto}
+#caption{margin:auto;display:block;width:80%;max-width:700px;text-align:center;color:#ccc;padding:10px 0}
+.modal-content,#caption{animation-name:zoom;animation-duration:0.6s}
+@keyframes zoom {	from {transform:scale(0)} to {transform:scale(1)}	}
+.close{z-index:1;position:absolute;z-index:1;top:15px;right:35px;color:#f1f1f1;font-size:40px;font-weight:bold;transition:0.3s}
+.close:hover,.close:focus{color:#bbb;text-decoration:none;cursor:pointer}
+@media only screen and (max-width: 1895px){.modal-content{height:89vh}}
+@media only screen and (max-width: 1415px){.modal-content{height:88vh}}
+@media only screen and (max-width: 1255px){.modal-content{height:86vh}}
+@media only screen and (max-width: 935px){.modal-content{height:83vh}}
+@media only screen and (max-width: 799px){.modal-content{width:50vw}}
+@media only screen and (max-width: 599px){.modal-content{width:100%}}
+
+.table_main_01{width:60%}
+@media only screen and (max-width: 1100px){.table_main_01{width:65%}}
+@media only screen and (max-width: 1000px){.table_main_01{width:70%}}
+@media only screen and (max-width: 800px){.table_main_01{width:80%}}
+@media only screen and (max-width: 700px){.table_main_01{width:100%}}
+
+.table_main_01 td,.table_main_01 th{border-top:0px;padding:0rem;padding-left:0.8rem;font-size:0.9rem;line-height:1.5}
+
+.img-thumbnail{margin-left:1%;min-width:230px;min-height:280px}/* Main Window sizer of Thumbnail */
+hr.tracklist_seperator{border-top:3px double #8c8b8b;width:40%}
+.thumb_box{width:17%;width:220px;min-width:220px}
+.mobile_Img_thumb_display{padding:.25rem;background-color:#fff;border:1px solid #dee2e6;border-radius:.25rem;max-width:100%;height:auto;display:block;margin-left:auto;margin-right:auto}
+.small_screen_thumb{margin-left:auto;margin-right:auto}
+@media only screen and (max-width: 560px){
+/* Mobile Versions Area */
+
+.img-thumbnail{display:none}.thumb_box{width:0%;width:0px;min-width:0px}.movie_name{text-align:center}.table_main_01 td{font-size:0.8rem;border-top:1px solid rgba(0, 0, 0, 0.5);border-bottom:1px solid rgba(0, 0, 0, 0.5)}
+/* CSS class used to crop long outputs (Mobile Version)*/
+.flstrs{font-size:12px;color:blue}
+.btn{padding:2px 12px !important}
+.close{font-size:30px !important}
+.long_txt_expnd{width:140px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.long_txt_expnd:hover{overflow:visible;white-space:normal;width:auto}
+.description_card{margin:auto;width:90%;font-size:13px}
+.plot_card{margin:auto;width:70%;font-size:13px}
+.tagline_card{margin:auto;width:70%;font-size:13px}
+.details_card{margin:auto;width:20rem}
+}
+.originalTitle_head,.title-type_head,.is_adult_head,.se_year_head,.runtime_head,.release_date_head,.genre_head,.language_head,.rated_head,.director_head,.writers_head,.stars_head{font-weight:bold;width:110px;min-width:100px}
+
+@media only screen and (max-width: 500px){.table_main_01 td,.table_main_01 th{font-size:0.7rem;padding-left:0.05rem},.originalTitle_head,.title-type_head,.is_adult_head,.se_year_head,.runtime_head,.release_date_head,.genre_head,.language_head,.rated_head,.director_head,.writers_head,.stars_head{font-weight:bold;width:80px;min-width:80px}}
+@media only screen and (max-width: 450px){.table_main_01 td,.table_main_01 th{font-size:0.6rem},.originalTitle_head,.title-type_head,.is_adult_head,.se_year_head,.runtime_head,.release_date_head,.genre_head,.language_head,.rated_head,.director_head,.writers_head,.stars_head{font-weight:bold;width:65px;min-width:65px}}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.dropdown-menu.show{
+min-width:fit-content;
+}
+.btn.btn-default.dropdown-toggle{
+width:fit-content;color:rgba(0, 0, 0, 0.5)
+}
+.btn.btn-default.dropdown-toggle:hover{
+color:red
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.open > .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+	width:fit-content;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: red;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+a:hover, a:focus {
+    color: #23527c;
+    text-decoration: underline;
+}
+a:active, a:hover {
+    outline: 0;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
