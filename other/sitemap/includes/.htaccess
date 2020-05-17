@@ -1,4 +1,0 @@
-<Files ~ "^\.ht">
-order allow,deny
-satisfy all
-</Files>
