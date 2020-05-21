@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
+$servername = "";
 $username = "";
 $password = "";
-$dbname = "movie-encyclopedia";
+$dbname = "";
 
 //Setting up the Database Tables Names
 $t1 = "First Table Name";//Table for Movie
