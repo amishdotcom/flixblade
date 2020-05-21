@@ -1,12 +1,12 @@
 <?php
 $servername = "localhost";
-$username = "root";
+$username = "";
 $password = "";
 $dbname = "movie-encyclopedia";
 
 //Setting up the Database Tables Names
-$t1 = "movie";//Table for Movie
-$t2 = "sm";//Table for Search Meta
+$t1 = "First Table Name";//Table for Movie
+$t2 = "Second Table Name";//Table for Search Meta
 
 //Opening the Database Connection
 	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
