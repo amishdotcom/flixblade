@@ -12,6 +12,8 @@ echo "<br \>";
 require('../access.php');
 include '../../../switches/db.php';
 
+$entries = "50000"; //Total number of entries to generate in 1 Sitemap File
+
 ?>
 
 <form method="post" action="">
@@ -169,7 +171,7 @@ try {
 
 //For title Links
 try {
-    $stmt = $conn->prepare("SELECT id FROM $t1 ORDER BY id LIMIT $lim_start,50000", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
+    $stmt = $conn->prepare("SELECT id FROM $t1 ORDER BY id LIMIT $lim_start,$entries", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT)) {
 
@@ -193,7 +195,7 @@ fwrite($myfile, $final_line);
 fclose($myfile);
 
 try {
-	$stmt = $conn->prepare("SELECT id FROM $t1 WHERE LIMIT $lim_start,50000", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
+	$stmt = $conn->prepare("SELECT id FROM $t1 WHERE LIMIT $lim_start,$entries", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
     $stmt = $conn->prepare("SELECT FOUND_ROWS()", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT)) {
