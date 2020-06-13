@@ -85,10 +85,6 @@ try {
 	  
 	  $decription = "$row[3]";
 	  
-	  
-	  //Image Engine --Start--
-	  //Please update $cdn variable above
-	  
 	  include '../../../includes/functional_engines/image_path_engine.php';
 	  
 	  if($image == "n/A" or $image == ""  or $image == "image-not-available.jpg"){}else
