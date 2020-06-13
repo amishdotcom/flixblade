@@ -17,8 +17,8 @@ ini_set('max_execution_time', 0);
 set_time_limit(0);
 
 //Initial settings, Just specify Source and Destination Image folder.
-$ImagesDirectory	= "../../../../cybertronics.org.in/public_html/cdn/flixblade/media/tmp/images/"; //Source Image Directory End with Slash
-$DestImagesDirectory	= "../../../../cybertronics.org.in/public_html/cdn/flixblade/media/tmp/thumbs/"; //Destination Image Directory End with Slash
+$ImagesDirectory	= "../../../../cdn/flixblade/media/tmp/images/"; //Source Image Directory End with Slash
+$DestImagesDirectory	= "../../../../cdn/flixblade/media/tmp/thumbs/"; //Destination Image Directory End with Slash
 //Change Width & Height on Lines No. 54 & 72 both & Below(Here)
 $NewImageWidth 		= 258; //New Width of Image
 $NewImageHeight 	= 280; // New Height of Image

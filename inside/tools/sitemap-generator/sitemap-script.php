@@ -143,7 +143,7 @@ $line1 = "<url>\n";
 $line2_1 = "<loc>";
 $line2_2 = "</loc>\n";
 $line3 = "<changefreq>monthly</changefreq>\n";
-$line4 = "<priority>0.8</priority>\n";
+$line4 = "<priority>0.7</priority>\n";
 $line5 = "</url>\n";
 $final_line = "</urlset>";
 

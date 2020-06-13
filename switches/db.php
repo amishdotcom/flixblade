@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "amish6655";
 $dbname = "movie-encyclopedia";
 
 //Setting up the Database Tables Names

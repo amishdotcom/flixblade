@@ -19,6 +19,9 @@ Following Tools are Available :
 <form action="sitemap-generator">
  <input type="submit" value="Sitemap Generator">
 </form>
+<form action="rss-generator">
+ <input type="submit" value="Rss Generator">
+</form>
 <form action="img-thumb-generator">
  <input type="submit" value="Image Thumbnails Generator">
 </form>

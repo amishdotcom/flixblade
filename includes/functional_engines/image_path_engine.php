@@ -7,6 +7,12 @@ foreach ($dp as $dps) {echo "".$dps['image']."";}
 $image = ob_get_contents(); //Grab output
 ob_end_clean(); //Discard output buffer
 
+if($page_type == "rss_generator")
+{
+$id = "$row[0]";
+$image = "$row[4]";
+}
+
 //For Path (Part)
 if ($id >= 1 && $id <= 100000 && $image != 'image-not-available.jpg'){$img_media_path = "part1";}
 elseif ($id >= 100001 && $id <= 200000 && $image != 'image-not-available.jpg'){$img_media_path = "part2";}
