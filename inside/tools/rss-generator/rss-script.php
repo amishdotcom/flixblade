@@ -12,6 +12,8 @@ echo "<br \>";
 require('../access.php');
 include '../../../switches/db.php';
 
+$entries = "50000"; //Total number of entries to generate in 1 Rss Feed
+
 ?>
 
 <form method="post" action="">
@@ -63,7 +65,7 @@ try {
 	$tmp_set_nouse = true;
 	
 			//For Every Other Rss File
-		$myfile = fopen("../../../rss-$sfn.xml", "w") or die("Unable to open file!");
+		$myfile = fopen("../../../rss/rss-$sfn.xml", "w") or die("Unable to open file!");
 
 		fwrite($myfile, $rss_presets);
 
@@ -74,7 +76,7 @@ try {
 
 //For title Links
 try {
-    $stmt = $conn->prepare("SELECT id,name,year,description,image FROM $t1 ORDER BY id LIMIT $lim_start,50000", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
+    $stmt = $conn->prepare("SELECT id,name,year,description,image FROM $t1 ORDER BY id LIMIT $lim_start,$entries", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT)) {
 
@@ -82,6 +84,7 @@ try {
 	  $title_link_entries = "$title_bridge$title_id_mux/";
 	  
 	  $name_year_mux = "$row[1] ($row[2])";
+	  $name_year_mux = preg_replace('/[^A-Za-z0-9. -]/', '', $name_year_mux);
 	  
 	  $decription = "$row[3]";
 	  
@@ -98,6 +101,7 @@ try {
 	  fwrite($myfile, $line3_2);
 	  if($decription == "n/A" or $decription == ""){}else
 	  {
+	  $decription = preg_replace('/[^A-Za-z0-9. -]/', '', $decription);
 	  fwrite($myfile, $line4_1);
 	  fwrite($myfile, $decription);
 	  fwrite($myfile, $line4_2);
@@ -118,7 +122,7 @@ fwrite($myfile, $rss_lastsets);
 fclose($myfile);
 
 try {
-	$stmt = $conn->prepare("SELECT id FROM $t1 WHERE LIMIT $lim_start,50000", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
+	$stmt = $conn->prepare("SELECT id FROM $t1 WHERE LIMIT $lim_start,$entries", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
     $stmt = $conn->prepare("SELECT FOUND_ROWS()", array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT)) {
