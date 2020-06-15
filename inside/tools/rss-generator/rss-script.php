@@ -83,8 +83,9 @@ try {
 	  $title_id_mux = "t$row[0]";
 	  $title_link_entries = "$title_bridge$title_id_mux/";
 	  
-	  $name_year_mux = "$row[1] ($row[2])";
+	  $name_year_mux = $row[1];
 	  $name_year_mux = preg_replace('/[^A-Za-z0-9. -]/', '', $name_year_mux);
+	  $name_year_mux = "$name_year_mux ($row[2])";
 	  
 	  $decription = "$row[3]";
 	  
