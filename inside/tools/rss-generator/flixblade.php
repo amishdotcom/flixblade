@@ -13,7 +13,6 @@ require('../access.php');
 </form>
 
 <br>
-Note:1.The Sitemap Would be Generated as "sitemap.xml", "sitemap-1.xml", "sitemap-2.xml"....at the site root.<br>
-&emsp;&emsp;&nbsp;2.Each Sitemap will be generated from the Sitemap lot Number Provided by the Admin.<br>
-&emsp;&emsp;&nbsp;3.The Sitemap will not be generated if the data for provided lot number is not available.<br>
-&emsp;&emsp;&nbsp;4.Contents of sitemap with lot number '0' can only be edited via the main sitemap-script.php file only via variable $zero_sitemap_content.
+Note:1.The RSS Feed Would be Generated as "rss-1.xml", "rss-2.xml", "rss-3.xml"....at the site_root/rss/.<br>
+&emsp;&emsp;&nbsp;2.Each RSS Feed will be generated from the Feed lot Number Provided by the Admin.<br>
+&emsp;&emsp;&nbsp;3.The RSS Feed will not be generated if the data for provided lot number is not available.<br>
