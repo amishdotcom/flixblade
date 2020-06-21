@@ -17,7 +17,7 @@ $entries = "100"; //Total number of entries to generate in 1 Rss Feed
 ?>
 
 <form method="post" action="">
-<p><font size="2"><center>Use with Caution!				[1.... => Rss that are actually created from Main Database (50K in a single file)]</center></font></p>
+<p><font size="2"><center>Use with Caution!				[1.... => Rss that are actually created from Main Database (100 in a single file)]</center></font></p>
 <h5><center>Generate Rss File No: <input type="number"  min="0" name="sfn"></center></h5>
 
 <center><input type="submit" name="submit" value="Generate"></center>
