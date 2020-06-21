@@ -12,7 +12,7 @@ echo "<br \>";
 require('../access.php');
 include '../../../switches/db.php';
 
-$entries = "50000"; //Total number of entries to generate in 1 Rss Feed
+$entries = "100"; //Total number of entries to generate in 1 Rss Feed
 
 ?>
 
