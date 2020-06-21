@@ -41,7 +41,7 @@ if($sfn != "0"){
 
 //Rss Query Limit Calculator
 $lim_start = $sfn - 1;
-$lim_start = $lim_start * 50000;
+$lim_start = $lim_start * $entries;
 
 $line1 = "<item>\n";
 $line2_1 = "<title>";
