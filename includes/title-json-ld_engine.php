@@ -74,7 +74,7 @@ else {$company_wl = $dps['company_without_links'];}
   ],"; } ?>
   <?php if(isset($description)){ ?><?php echo "\n"; ?>  "description": "<?php echo $description; ?>",<?php } ?>
   <?php if(isset($release_date_iso_8601)){ ?><?php echo "\n"; ?>  "datePublished": "<?php echo $release_date_iso_8601; ?>",<?php } ?>
-  <?php if(isset($plot_key)){ ?><?php echo "\n"; ?>  "keywords": "<?php echo $plot_key; ?>",<?php } ?>
-  <?php if(isset($runtime_jld)){ ?><?php echo "\n"; ?>  "duration": "<?php echo $runtime_jld; ?>"<?php } ?>
+  <?php if(isset($runtime_jld)){ ?><?php echo "\n"; ?>  "duration": "<?php echo $runtime_jld; ?>",<?php } ?>
+  <?php if(isset($plot_key)){ ?><?php echo "\n"; ?>  "keywords": "<?php echo $plot_key; ?>"<?php } ?>
   
 }</script>
