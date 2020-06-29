@@ -1,7 +1,8 @@
 <?php $page_type = 'title'; ?>
 <br><br>
 <!-- Title & Year(Joint) Specific -->
-<h1 class="movie_name"><span>&nbsp;&nbsp;<?php if(isset($dps['name'])){echo $dps['name'];} ?></span>&nbsp;<span class="title_year"><?php if(isset($dps['year'])){echo "(".$dps['year'].")" ;} ?></span></h1>
+<?php //If Title Name is greator than 40 than reduce its font size ?>
+<h1 class="movie_name"<?php if(strlen($dps['name']) > 40){echo" style=\"font-size:22px\"";} ?>><span>&nbsp;&nbsp;<?php if(isset($dps['name'])){echo $dps['name'];} ?></span>&nbsp;<span class="title_year"><?php if(isset($dps['year'])){echo "(".$dps['year'].")" ;} ?></span></h1>
 
 <?php
 	if(empty($dps['name']) AND empty($dps['year']) AND empty($image) AND empty($img_media_path) AND empty($dps['originalTitle']) AND empty($title_type) AND empty($dps['genre_without_links']) AND empty($is_adult) AND empty($end_year) AND empty($runtime) AND empty($dps['release_date']) AND empty($dps['language_without_links']) AND empty($dps['mpaa']) AND empty($director_wl) AND empty($writer_wl) AND empty($dps['cast_3_only_without_links']) AND empty($description) AND empty($plot) AND empty($tagline) AND empty($aka) AND empty($company_wl) AND empty($country_wl) AND empty($creator_wl) AND empty($certification) AND empty($location_wl) AND empty($budget) AND empty($gross) AND empty($aspect_ratio) AND empty($color) AND empty($sound_mix) AND empty($awards) AND empty($seasons_wl) AND empty($full_cast)){
