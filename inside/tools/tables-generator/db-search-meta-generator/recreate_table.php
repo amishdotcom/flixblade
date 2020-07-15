@@ -33,8 +33,8 @@ catch(PDOException $e){echo "Error: " . $e->getMessage();}
 //Search Meta Table and Columns Creator
 $sm_columns = "(
      meta_id INT( 11 ) PRIMARY KEY DEFAULT '0',
-     meta_instant longtext COLLATE 'utf8_general_ci' UNIQUE,
-	 meta_instant_2 longtext COLLATE 'utf8_general_ci' UNIQUE,
+     meta_instant longtext COLLATE 'utf8_general_ci',
+	 meta_instant_2 longtext COLLATE 'utf8_general_ci',
 	 meta_name longtext COLLATE 'utf8_general_ci',
 	 meta_type varchar(255) COLLATE 'utf8_general_ci',
 	 meta_year varchar(255) COLLATE 'utf8_general_ci',
@@ -42,9 +42,15 @@ $sm_columns = "(
 	 meta_cast longtext COLLATE 'utf8_general_ci',
      meta_search_meta longtext COLLATE 'utf8_general_ci');";
 
+//For Creating New Table
 try {
 $stmt = $conn->prepare("CREATE TABLE IF NOT EXISTS $t2 $sm_columns ");
 $stmt->execute();}
+catch(PDOException $e){echo "Error: " . $e->getMessage();}
+//For Altering Columns to Unique
+try {
+$stmt2 = $conn->prepare("alter table $t2 ADD UNIQUE(meta_instant(255), meta_instant_2(255)); ");
+$stmt2->execute();}
 catch(PDOException $e){echo "Error: " . $e->getMessage();}
 
 echo "<br><br><br><br><font color=\"red\" size=\"18\" face=\"Arial\"><center>Table Recreated !!</center></font>";
