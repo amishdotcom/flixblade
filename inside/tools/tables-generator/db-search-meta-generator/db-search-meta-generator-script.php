@@ -50,35 +50,37 @@ try
 				//For Meta Id (Col. 1)
 				$meta_id = 	$row[0];
 				
-				//For Meta Instant Column (Col. 2)
+				//For Meta Instant Column & Meta Instant 2 Column (Col. 2) & (Col. 3)
 				include '../../../../includes/functional_engines/title-type_engine.php';
 				$meta_instant = "$row[1] ($title_type - $row[7])";
+				$meta_instant_2 = "$row[1] $row[7]";
 
-				//For Meta Search Meta Column (Col. 3)
+				//For Meta Search Meta Column (Col. 4)
 				$meta_name = $row[1];
 
-				//For Meta Type Column (Col. 4)
+				//For Meta Type Column (Col. 5)
 				$meta_type = $title_type;
 
-				//For Meta Year Column (Col. 5)
+				//For Meta Year Column (Col. 6)
 				$meta_year = $row[7];
 
-				//For Meta Directed by Column (Col. 6)
+				//For Meta Directed by Column (Col. 7)
 				include '../../../../includes/functional_engines/director_engine.php';
 				$meta_directed_by = $director_wl;
 
-				//For Meta Cast(3 Only) by Column (Col. 7)
+				//For Meta Cast(3 Only) by Column (Col. 8)
 				include '../../../../includes/functional_engines/cast_3_only_engine.php';
 
-				//For Meta Search Meta Column (Col. 8)
+				//For Meta Search Meta Column (Col. 9)
 				include '../../../../includes/functional_engines/plot-keywords_engine.php';
 				include '../../../../includes/functional_engines/aka_engine.php';
 				include '../../../../includes/functional_engines/sm_plot-key_aka_joiner_engine.php';
 
 				try {
-					$write = $conn->prepare("INSERT IGNORE INTO $t2 (meta_id, meta_instant, meta_name, meta_type, meta_year, meta_directed_by, meta_cast, meta_search_meta) VALUES (:meta_id, :meta_instant, :meta_name, :meta_type, :meta_year, :meta_directed_by, :meta_cast, :meta_search_meta)");
+					$write = $conn->prepare("INSERT IGNORE INTO $t2 (meta_id, meta_instant, meta_instant_2, meta_name, meta_type, meta_year, meta_directed_by, meta_cast, meta_search_meta) VALUES (:meta_id, :meta_instant, :meta_instant_2, :meta_name, :meta_type, :meta_year, :meta_directed_by, :meta_cast, :meta_search_meta)");
 					$write->bindParam(':meta_id', $meta_id);
 					$write->bindParam(':meta_instant', $meta_instant);
+					$write->bindParam(':meta_instant_2', $meta_instant_2);
 					$write->bindParam(':meta_name', $meta_name);
 					$write->bindParam(':meta_type', $meta_type);
 					$write->bindParam(':meta_year', $meta_year);
