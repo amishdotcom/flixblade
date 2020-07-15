@@ -62,11 +62,11 @@ if(isset($_GET['q']))
 
 						//----Filtering and Formatting for Input----//
 						//Removing the Brackets from Input
-						$keyword = str_replace(array( '(', ')' ), '', $keyword);
+						//$keyword = str_replace(array( '(', ')' ), '', $keyword);
 						//Removing Dots from Input
 						$keyword = str_replace(".", "", $keyword);
 						//Removing the emdash
-						$keyword = str_replace('-', '', $keyword);
+						//$keyword = str_replace('-', '', $keyword);
 						//Removing the Keywords like album, track, tracklist, lyrics, video
 						$keyword = str_replace('title', '', $keyword);
 						$keyword = str_replace('Movie', '', $keyword);
@@ -77,14 +77,13 @@ if(isset($_GET['q']))
 						$keyword = str_replace('Video', '', $keyword);
 						$keyword = str_replace('Mini TV Series', '', $keyword);
 						$keyword = str_replace('TV Special', '', $keyword);
-						$keyword = str_replace('-', '', $keyword);
 						//Removing the Special Characters from Input
 						$keyword = preg_replace('/[^a-zA-Z0-9_ %\[\]\.\(\)%&-]/s', '', $keyword);
 
 						$keyword = preg_replace('/\s+/', ' ', $keyword); // it will replace multiple spaces from the input.
 						
 						//Search Queries ----------------------------------
-						$query = "SELECT meta_instant, meta_name, meta_type, meta_year, meta_directed_by, meta_cast, meta_search_meta, meta_id FROM $t2 WHERE meta_instant LIKE '%$keyword%' OR meta_search_meta LIKE '%$keyword%'"; // select query
+						$query = "SELECT meta_instant, meta_instant_2, meta_name, meta_type, meta_year, meta_directed_by, meta_cast, meta_search_meta, meta_id FROM $t2 WHERE meta_instant LIKE '%$keyword%' OR meta_instant_2 LIKE '%$keyword%' OR meta_search_meta LIKE '%$keyword%'"; // select query
 
 
 						//Search Queries ----------------------------------
