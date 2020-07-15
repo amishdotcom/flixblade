@@ -13,11 +13,11 @@ include '../../../../switches/db.php';
 
 			//----Filtering and Formatting for Input----//
 			//Removing the Brackets from Input
-			$keyword = str_replace(array( '(', ')' ), '', $keyword);
+			//$keyword = str_replace(array( '(', ')' ), '', $keyword);
 			//Removing Dots from Input
 			$keyword = str_replace(".", "", $keyword);
 			//Removing the emdash
-			$keyword = str_replace('-', '', $keyword);
+			//$keyword = str_replace('-', '', $keyword);
 			//Removing the Banned Keywords
 			$keyword = str_replace('title', '', $keyword);
 			$keyword = str_replace('Movie', '', $keyword);
@@ -28,18 +28,17 @@ include '../../../../switches/db.php';
 			$keyword = str_replace('Video', '', $keyword);
 			$keyword = str_replace('Mini TV Series', '', $keyword);
 			$keyword = str_replace('TV Special', '', $keyword);
-			$keyword = str_replace('-', '', $keyword);
 			//Removing the Special Characters from Input
 			$keyword = preg_replace('/[^a-zA-Z0-9_ %\[\]\.\(\)%&-]/s', '', $keyword);
 
 	//If Input is a Special Character then Shuffle the Results
 	if(preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', trim($_GET['term'])) OR preg_match('/'.preg_quote('^\'£$%^&*()}{@#~?><,@|-=-_+-¬', '/').'/', trim($_GET['term'])) OR trim($_GET['term']) == ":" OR trim($_GET['term']) == "/" OR trim($_GET['term']) == "." OR trim($_GET['term']) == '"' OR trim($_GET['term']) == ";" OR trim($_GET['term']) == "[" OR trim($_GET['term']) == "]" OR trim($_GET['term']) == "!" OR trim($_GET['term']) == "title" OR trim($_GET['term']) == "Movie" OR trim($_GET['term']) == "Short Film" OR trim($_GET['term']) == "TV Series" OR trim($_GET['term']) == "TV Movie" OR trim($_GET['term']) == "TV Episode" OR trim($_GET['term']) == "Video" OR trim($_GET['term']) == "Mini TV Series" OR trim($_GET['term']) == "TV Special" OR trim($_GET['term']) == "-"){
-														$query = "SELECT meta_instant, meta_id FROM $t2 WHERE meta_instant LIKE :term ORDER BY RAND() LIMIT 11"; // select query
+														$query = "SELECT meta_instant, meta_instant_2, meta_id FROM $t2 WHERE meta_instant LIKE :term OR meta_instant_2 LIKE :term ORDER BY RAND() LIMIT 11"; // select query
 
 														}
 	//If Input isn't a Special Character then Don't Shuffle the Results
 	else{
-	$query = "SELECT meta_instant, meta_id FROM $t2 WHERE meta_instant LIKE :term LIMIT 11"; // select query
+	$query = "SELECT meta_instant, meta_instant_2, meta_id FROM $t2 WHERE meta_instant LIKE :term OR meta_instant_2 LIKE :term LIMIT 11"; // select query
 		}
 
 	//LIMIT 11 to limit Showing of 11 Search Results Only (Above in Query)
