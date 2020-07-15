@@ -33,7 +33,8 @@ catch(PDOException $e){echo "Error: " . $e->getMessage();}
 //Search Meta Table and Columns Creator
 $sm_columns = "(
      meta_id INT( 11 ) PRIMARY KEY DEFAULT '0',
-     meta_instant longtext COLLATE 'utf8_general_ci',
+     meta_instant longtext COLLATE 'utf8_general_ci' UNIQUE,
+	 meta_instant_2 longtext COLLATE 'utf8_general_ci' UNIQUE,
 	 meta_name longtext COLLATE 'utf8_general_ci',
 	 meta_type varchar(255) COLLATE 'utf8_general_ci',
 	 meta_year varchar(255) COLLATE 'utf8_general_ci',
