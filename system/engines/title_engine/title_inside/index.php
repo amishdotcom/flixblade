@@ -52,7 +52,7 @@ if ( $(window).width() < 560) {
  <?php if(isset($dps['mpaa'])){ echo "\n"; ?><tr><td class="rated_head">Rated:&nbsp;</td><td><?php echo $dps['mpaa']; ?></td></tr><?php } ?>
  <?php if(isset($director_wl)){ echo "\n"; ?><tr><td class="director_head">Director:&nbsp;</td><td><div<?php if(strlen($director_wl) > 50) { echo " class=\"long_txt_expnd\""; } ?>><?php echo $director_wl; ?></div></td></tr><?php } ?>
  <?php if(isset($writer_wl)){ echo "\n"; ?><tr><td class="writers_head">Writer:&nbsp;</td><td><div<?php if(strlen($writer_wl) > 50) { echo " class=\"long_txt_expnd\""; } ?>><?php echo $writer_wl; ?></div></td></tr><?php } ?>
- <?php if(isset($dps['cast_3_only_without_links'])){ echo "\n"; ?><tr><td class="stars_head">Stars:&nbsp;</td><td><div<?php if(strlen($dps['cast_3_only_without_links']) > 50) { echo " class=\"long_txt_expnd\""; } ?>><?php echo $dps['cast_3_only_without_links']; ?> &nbsp;<?php if(isset($full_cast) AND (strlen($dps['cast_3_only_without_links']) > 25)){ ?><a href="full_cast" class="flstrs" data-toggle="modal" data-target="#full_cast">»</a><?php } ?></div></td></tr><?php } ?>
+ <?php if(isset($dps['cast_3_only_without_links'])){ echo "\n"; ?><tr><td class="stars_head">Stars:&nbsp;</td><td><div<?php if(strlen($dps['cast_3_only_without_links']) > 50) { echo " class=\"long_txt_expnd\""; } ?>><?php echo $dps['cast_3_only_without_links']; ?> &nbsp;<?php if(isset($full_cast) AND (strlen($dps['cast_3_only_without_links']) > 25)){ ?><a href="javascript:void(0)" class="flstrs" data-toggle="modal" data-target="#full_cast">»</a><?php } ?></div></td></tr><?php } ?>
 
 </table>
 
